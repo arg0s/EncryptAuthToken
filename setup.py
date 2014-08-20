@@ -1,11 +1,10 @@
 from distutils.core import setup
 
 setup(
-    name='encrypt_auth_token',
+    name='encryptauthtoken',
     version='0.1.0',
     author='arg0s',
     author_email='arvi@alumni.iastate.edu',
-    packages=['encrypt_auth_token'],
     scripts=['crypt.py'],
     url='https://github.com/arg0s/EncryptAuthToken',
     license='LICENSE',
