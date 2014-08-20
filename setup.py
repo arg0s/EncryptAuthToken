@@ -9,7 +9,7 @@ setup(
     scripts=['crypt.py'],
     url='https://github.com/arg0s/EncryptAuthToken',
     license='LICENSE',
-    description='A simple module to help you encrypt/decrypt social media authentication tokens with AES before storing them... well, wherever you'd like to!',
+    description='A simple module to help you encrypt/decrypt social media authentication tokens with AES before storing them... well, wherever you\'d like to!',
     long_description=open('README').read(),
     install_requires=[
         "pycrypto >= 2.6.1"
