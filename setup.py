@@ -10,7 +10,7 @@ setup(
     url='https://github.com/arg0s/EncryptAuthToken',
     license='LICENSE',
     description='A simple module to help you encrypt/decrypt social media authentication tokens with AES before storing them... well, wherever you\'d like to!',
-    long_description=open('README').read(),
+    long_description=open('README.md').read(),
     install_requires=[
         "pycrypto >= 2.6.1"
     ],
