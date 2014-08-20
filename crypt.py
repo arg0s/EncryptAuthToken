@@ -19,16 +19,11 @@ pad = lambda s: s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * PADDING
 EncodeAES = lambda c, s: base64.b64encode(c.encrypt(pad(s)))
 DecodeAES = lambda c, e: c.decrypt(base64.b64decode(e)).rstrip(PADDING)
 
-# generate a random secret key
-secret = os.urandom(BLOCK_SIZE)
-
-# create a cipher object using the random secret
-cipher = AES.new(secret)
-
-
-def encrypt_token(token):
+def encrypt_token(secret, token):
+    cipher = AES.new(secret[:BLOCK_SIZE])
     return EncodeAES(cipher, token)
 
 
-def decrypt_token(code):
+def decrypt_token(secret, code):
+    cipher = AES.new(secret[:BLOCK_SIZE])
     return DecodeAES(cipher, code)
